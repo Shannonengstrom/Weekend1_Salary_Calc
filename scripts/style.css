@@ -1,1 +1,23 @@
-.card
+/* .table{
+    border: 1px solid black;
+} */
+
+.thead {
+    background-color: #CCCCCC;
+}
+
+.table tr:nth-child(even) td{
+    background-color:#ECECEC; 
+}
+
+.table tr:nth-child(odd) td{
+    background-color: #FFFFFF; 
+}
+
+/* .table-bordered { */
+
+/* 
+.table-responsive
+
+.table-danger
+ */
