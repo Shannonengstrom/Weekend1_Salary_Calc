@@ -30,26 +30,45 @@ function addEmployee() {
     employees.push( newEmployee ); 
     console.log( employees ); 
     // update DOM with new Employee
-    displayEmployees(); 
+    displayEmployees();
+    monthlyTotal();  
 } // end addEmployee
 
 
 function displayEmployees() {
     console.log( 'in displayEmployees' );
     // target output element and save in variable 
-    let el = $( '#employeesOut');
+    let el = $( '.employeesOut');
     // empty the output element
     el.empty(); 
     // loop through array employees
-    for( employee of employees){
+    for( newEmployee of employees){
         //append each employee to the DOM
-        let outputString = '<div class="col-2.5">';
-            outputString = '<div class="card-header">"First Name"</div>';
-            outputString = '<div class="card-body">' + employee.firstname + '</div>';
-            outputString = '<div class="card-header">' + employee.firstname + '</div>';
-            outputString = '<div class="card-header">' + employee.firstname + '</div>';
-            outputString = '<div class="card-header">' + employee.firstname + '</div>';
-
+        let outputString = '<tr>';
+            outputString += '<td>' + newEmployee.firstName + '</td>'; //try table-header if this doesn't work
+            outputString += '<td>' + newEmployee.lastName + '</td>';
+            outputString += '<td>' + newEmployee.id + '</td>';
+            outputString += '<td>' + newEmployee.title + '</td>';
+            outputString += '<td>' + newEmployee.annualSalary + '</td>';
+            outputString += '</tr>';
+        el.append( outputString);
         }
+} // end displayEmployees
 
+// let employeeSalTotal = [];
+
+function monthlyTotal(){
+    console.log( 'in monthlyTotal');
+    let sum = 0;
+   
+    for( newEmployee of employees){
+        // let outputString = '<div>';
+        //     outputString += '<div>' + sum + '</div>';
+        //     outputString += '</div>';
+            sum += Number(newEmployee.annualSalary)/12;
+    };
+    console.log(sum);
+        $( '#totalOutput').empty();
+        $( '#totalOutput').append( '<div>Total Monthly: $' + sum + '</div>');
+return sum; 
 }

@@ -2,17 +2,51 @@
     border: 1px solid black;
 } */
 
+
+
+#totalOutput {
+    float: right; 
+}
+
+.button {
+    background-color: #E6E6E6; /* light grey*/
+    border-color: #040404; /*black border*/
+    border-radius: 4px; /*rounded corners*/
+    color: #111111; /*black text*/
+}
+
+    /* padding: 15px 32px;
+    text-align: center;
+    /* text-decoration: none;
+    font-size: 16px;
+    width: 120px;
+    height: 30px;
+    /* position: relative; 
+    top: 1580;
+    left:801;
+} */
+
+/* .head {
+    background-color: #606060; /* darkest grey*/
+    /* margin: */
+
 .thead {
-    background-color: #CCCCCC;
+    background-color: #CCCCCC; /* dark grey*/
 }
 
 .table tr:nth-child(even) td{
-    background-color:#ECECEC; 
+    background-color:#ECECEC; /* lightest grey*/
 }
 
 .table tr:nth-child(odd) td{
-    background-color: #FFFFFF; 
+    background-color: #FFFFFF; /* white */
 }
+
+.td-bottom-row {
+    background-color:#ECECEC; /* lightest grey*/
+    height: 
+}
+
 
 /* .table-bordered { */
 
