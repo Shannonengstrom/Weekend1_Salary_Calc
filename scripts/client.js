@@ -17,7 +17,7 @@ let employees = [];
 
 function readyNow(){
     console.log( 'in readyNow' );
-    $( '#addButton' ).on( 'click', addEmployee );
+    $( '#addButton' ).on( 'click', addEmployee);
     // addModeGo();
 } // end readyNow
 
@@ -31,9 +31,30 @@ function addEmployee() {
     console.log( employees ); 
     // update DOM with new Employee
     displayEmployees();
-    monthlyTotal();  
+    monthlyTotal(); 
+    reset();  
 } // end addEmployee
 
+  
+function reset(){
+    console.log( 'in reset' );
+    $('#firstNameIn').empty();
+ ///LEFT OFF HERE
+ }
+
+
+    // $('#firstNameIn').reset();
+//    $('#firstNameIn').val(empty);
+//    $('#lastNameIn').val(empty);
+//    $('#idIn').empty(empty);
+//    $('#titleIn').empty();
+//    $('#annualSalaryIn').empty();
+    
+
+
+// function reset() {
+   
+// }
 
 function displayEmployees() {
     console.log( 'in displayEmployees' );
