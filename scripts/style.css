@@ -2,12 +2,17 @@
     border: 1px solid black;
 } */
 
-
-
-#totalOutput {
+/* output */
+.totalOutput {
     float: right; 
 }
 
+.red{
+    color: red;
+    float: right;  
+  }
+
+/* button  */
 .button {
     background-color: #E6E6E6; /* light grey*/
     border-color: #040404; /*black border*/
@@ -15,6 +20,7 @@
     color: #111111; /*black text*/
 } 
 
+/* table */
 /* .head {
     background-color: #606060; /* darkest grey*/
     /* margin: */
@@ -31,11 +37,9 @@
     background-color: #FFFFFF; /* white */
 }
 
-.td-bottom-row {
+.td-bottom-ro {
     background-color:#ECECEC; /* lightest grey*/
-    height: 
 }
-
 
 /* .table-bordered { */
 

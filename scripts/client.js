@@ -38,6 +38,8 @@ function addEmployee() {
     $( '#idIn').val('');
     $( '#titleIn').val('');
     $( '#annualSalaryIn').val(''); 
+    // check if above 20,000 - run changeToRed function 
+    // changeToRed(); 
 } // end addEmployee
 
 function displayEmployees() {
@@ -71,8 +73,17 @@ function monthlyTotal(){
     };
     console.log(sum);
     // clear totalOutput after each time 
-        $( '#totalOutput').empty();
+        $( '.totalOutput').empty();
     // append output each time 
-        $( '#totalOutput').append( '<div>Total Monthly: $' + sum + '</div>');
+        $( '.totalOutput').append( '<div>Total Monthly: $' + sum + '</div>');
+    if (sum >= 20000) {
+        $('.totalOutput').toggleClass('red');
+    }
+    else {
+    console.log('false');
+    }
 return sum; 
 }
+
+// function changeToRed(){
+//     console.log('in ChangeToRed')
