@@ -12,7 +12,6 @@ class Employee{
     } // end constructor
 } // end Employee class
 
-
 let employees = [];
 
 function readyNow(){
@@ -31,30 +30,15 @@ function addEmployee() {
     console.log( employees ); 
     // update DOM with new Employee
     displayEmployees();
+    // call function to display monthlyTotal
     monthlyTotal(); 
-    reset();  
+    // Clear input fields after click of button - reset to placeholder text
+    $( '#firstNameIn').val('');
+    $( '#lastNameIn').val('');
+    $( '#idIn').val('');
+    $( '#titleIn').val('');
+    $( '#annualSalaryIn').val(''); 
 } // end addEmployee
-
-  
-function reset(){
-    console.log( 'in reset' );
-    $('#firstNameIn').empty();
- ///LEFT OFF HERE
- }
-
-
-    // $('#firstNameIn').reset();
-//    $('#firstNameIn').val(empty);
-//    $('#lastNameIn').val(empty);
-//    $('#idIn').empty(empty);
-//    $('#titleIn').empty();
-//    $('#annualSalaryIn').empty();
-    
-
-
-// function reset() {
-   
-// }
 
 function displayEmployees() {
     console.log( 'in displayEmployees' );
@@ -66,7 +50,7 @@ function displayEmployees() {
     for( newEmployee of employees){
         //append each employee to the DOM
         let outputString = '<tr>';
-            outputString += '<td>' + newEmployee.firstName + '</td>'; //try table-header if this doesn't work
+            outputString += '<td>' + newEmployee.firstName + '</td>';
             outputString += '<td>' + newEmployee.lastName + '</td>';
             outputString += '<td>' + newEmployee.id + '</td>';
             outputString += '<td>' + newEmployee.title + '</td>';
@@ -76,20 +60,19 @@ function displayEmployees() {
         }
 } // end displayEmployees
 
-// let employeeSalTotal = [];
-
 function monthlyTotal(){
     console.log( 'in monthlyTotal');
+    // set sum 
     let sum = 0;
-   
+    // run for loop 
     for( newEmployee of employees){
-        // let outputString = '<div>';
-        //     outputString += '<div>' + sum + '</div>';
-        //     outputString += '</div>';
-            sum += Number(newEmployee.annualSalary)/12;
+    // Increase sum from 0 for newEmployee's annual salary / 12 to get monthly
+        sum += Number(newEmployee.annualSalary)/12;
     };
     console.log(sum);
+    // clear totalOutput after each time 
         $( '#totalOutput').empty();
+    // append output each time 
         $( '#totalOutput').append( '<div>Total Monthly: $' + sum + '</div>');
 return sum; 
 }
