@@ -18,6 +18,8 @@
     border-color: #040404; /*black border*/
     border-radius: 4px; /*rounded corners*/
     color: #111111; /*black text*/
+    margin: 10px; 
+    float: left; 
 } 
 
 /* table */
@@ -48,3 +50,18 @@
 
 .table-danger
  */
+
+ .jumbotron{
+     background-color:#606060; 
+     height: 100%; 
+     width: 100%; 
+ }
+
+ .h1 {
+     color:#e4e4e4;  
+ }
+
+ .div {
+     padding-top: 10px; 
+     padding-bottom: 10px;
+ }
