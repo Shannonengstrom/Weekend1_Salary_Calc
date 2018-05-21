@@ -17,6 +17,9 @@ let employees = [];
 function readyNow(){
     console.log( 'in readyNow' );
     $( '#addButton' ).on( 'click', addEmployee);
+    $( '#deleteButton' ).on( 'click', deleteEmployee);
+
+
     // addModeGo();
 } // end readyNow
 
@@ -41,6 +44,19 @@ function addEmployee() {
     // check if above 20,000 - run changeToRed function 
     // changeToRed(); 
 } // end addEmployee
+
+
+function deleteEmployee() {
+    console.log( 'in deleteEmployee');
+    let idToDelete = $("#deleteID").val(); 
+    for ( let i = 0; i < employees.length; i++) {
+        let employee = employees[i];
+        if(idToDelete === employee.id) {
+            employees.splice(i,1);
+        }
+    }
+    displayEmployees(); 
+}
 
 function displayEmployees() {
     console.log( 'in displayEmployees' );
@@ -75,12 +91,12 @@ function monthlyTotal(){
     // clear totalOutput after each time 
         $( '.totalOutput').empty();
     // append output each time 
-        $( '.totalOutput').append( '<div>Total Monthly: $' + sum + '</div>');
+        $( '.totalOutput').append( '<div>Total Monthly: $' + sum.toFixed(2) + '</div>');
     if (sum >= 20000) {
-        $('.totalOutput').toggleClass('red');
+        $('.totalOutput').addClass('red');
     }
     else {
-    console.log('false');
+        $('.totalOutput').removeClass('red');
     }
 return sum; 
 }

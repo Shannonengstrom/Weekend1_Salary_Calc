@@ -8,7 +8,7 @@
 }
 
 .red{
-    background-color: red;
+    color: red;
     float: right;  
   }
 
@@ -64,9 +64,4 @@
  .div {
      padding-top: 10px; 
      padding-bottom: 10px;
- }
-
- .input {
-     padding: 10px; 
-     margin: 10px; 
  }

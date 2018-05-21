@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- all files are read in the following order. Client jquery is needed first since js calls jquery  -->
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="scripts/stylesolve.css">
+    <!-- best practice is for scripts to come after links -->
+    <script src="vendors/jquery-3.3.1.min.js"></script>
+    <script src="scripts/clientsolve.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- header is just like a dev but is more descriptitive. Same with footer and main -->
+    <header>
+        <h1>Employee Salary Calculator</h1>
+    </header>
+    <main>
+            <section>
+                <!-- inputs -->
+                <p>THIS IS INPUTS</p>
+                <input type="text" placeholder="First Name" id="firstName" />
+                <input type="text" placeholder="Last Name" id="lastName" />
+                <input type="number" placeholder="ID" id="idNumber"/>
+                <input type="text" placeholder="Title" id="title"/>
+                <input type="number" placeholder="Annual Salary" id="salary"/>
+                <button id="submitButton">SUBMIT</button>
+
+            </section>
+            <section>
+                <!-- outputs -->
+                <p>THIS IS OUTPUTS</p>
+                <table class="table table-striped">
+                    <thead>
+                        <!-- th are column headers -->
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Annual Salary</th></th>
+                    </thead>
+                    <tbody id="tableTarget"></tbody>
+                    <!-- Add employees here -->
+                </table>
+                <div id="monthlySalaryTarget"></div>
+            </section>
+    </main> 
+</body>
+</html>
+
+
+
+
+
+
+<!-- MY VERSION -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vendors/jquery-3.3.1.min.js"></script>
+    <script src="scripts/clientsolve.js"></script>
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="scripts/stylesolve.css">
+    <title>Week 1 Salary Calculator</title>
+
+</head>
+<body>
+    <div class="jumbotron h1">
+    <h1 class="container text-center">Salary Calculator - live solve version</h1>
+    </div>
+    <div class="container">
+        <div id="input"> 
+            <br>
+            <h2>Add Employee</h2> 
+            <br>
+            <input type="text" placeholder="First Name" id="firstNameIn">
+            <input type="text" placeholder="Last Name" id="lastNameIn">
+            <input type="number" placeholder="ID" id="idIn">
+            <input type="text" placeholder="Title" id="titleIn">
+            <input type="number" placeholder="Annual Salary" id="annualSalaryIn">
+            <br>
+                <button class="button" id="addButton">Submit</button>           
+        </div>
+    </div>
+<br>
+<br>
+    <div id="output" class="container">
+        <h2>Employees</h2>
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="thead">
+                    <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Annual Salary</th>
+                    </tr>
+                </thead>
+                <tbody class="employeesOut"> 
+                    <div class="table tr:nth-child(even) table tr:nth-child(odd)">
+                    <tr>
+                        <td>Name 1</td>
+                        <td>Name 1</td>
+                        <td>12345</td>
+                        <td>Title 1</td>
+                        <td>Annual Salary</td>
+                    </tr>
+                    <tr>
+                        <td>Name 1</td>
+                        <td>Name 1</td>
+                        <td>12345</td>
+                        <td>Title 1</td>
+                        <td>Annual Salary</td>
+                        <th colspan="5" class="td-bottom-row"></th>
+                    </tr>     
+                    </div>
+                </tbody> 
+            </table>
+            <div class="totalOutput"></div>
+        </div>
+    </div>
+    
+</body>
+</html> -->
